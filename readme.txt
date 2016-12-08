@@ -32,6 +32,16 @@
             |--- service 公共服务      
       |--- dist 通过babel编译好的es5文件
 |--- application  应用级目录及文件
+      |--- config  整个应用配置
+            |--- app.json  基本配置，包括版本号，session及接口请求相关的timeout等
+            |--- cache.json  数据级，页面级缓存配置，包括缓存方式，缓存过期策略等
+            |--- cors.json  对外提供restful api接口的时候是否支持跨域，如果支持，白名单域名的配置
+            |--- db.json  数据库连接的配置
+            |--- hook.json  钩子配置，包含了中间件的配置
+            |--- interface.json  如果需要通过请求第三方接口获取数据，配置接口地址
+            |--- log.json  日志处理配置
+            |--- redis.json  redis配置
+            |--- static.json 静态资源引用配置
       |--- cache  页面级缓存文件目录，如果缓存方式是文件形式的
       |--- view  应用的视图文件
       |--- static  应用的静态资源目录，根据情况决定是否需要
@@ -41,17 +51,7 @@
             |--- js
       |--- src  es6.7 源文件
             |--- common 应用中的公共部分
-                  |--- bootstrap  程序启动项
-                  |--- config  整个应用配置
-                        |--- app.json  基本配置，包括版本号，session及接口请求相关的timeout等
-                        |--- cache.json  数据级，页面级缓存配置，包括缓存方式，缓存过期策略等
-                        |--- cors.json  对外提供restful api接口的时候是否支持跨域，如果支持，白名单域名的配置
-                        |--- db.json  数据库连接的配置
-                        |--- hook.json  钩子配置，包含了中间件的配置
-                        |--- interface.json  如果需要通过请求第三方接口获取数据，配置接口地址
-                        |--- log.json  日志处理配置
-                        |--- redis.json  redis配置
-                        |--- static.json 静态资源引用配置
+                  |--- bootstrap  程序启动项                  
                   |--- core 应用的核心代码
                         |--- controller
                                 |--- basic.js  所有controller基类，继承于/system/src/core/controller/basic.js
