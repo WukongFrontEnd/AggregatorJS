@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {    
-    "build": "babel ./src --out-dir ./dist --source-maps"    
+    "build": "babel ./src --out-dir ./lib --source-maps"    
   },
   "dependencies": {
     
